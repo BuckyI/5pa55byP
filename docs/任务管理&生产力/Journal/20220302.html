@@ -1,0 +1,1864 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
+    
+    
+      
+        <title>基于时间分配以及日历视图的时间管理 - HowTo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.644de097.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="HowTo" class="md-header__button md-logo" aria-label="HowTo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HowTo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              基于时间分配以及日历视图的时间管理
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../index.html" class="md-tabs__link">
+      关于
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Others/index.html" class="md-tabs__link">
+        Others
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86.html" class="md-tabs__link md-tabs__link--active">
+        任务管理&生产力
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E5%AA%92%E4%BD%93%E7%BB%84%E7%BB%87%26%E5%A4%84%E7%90%86/index.html" class="md-tabs__link">
+        媒体组织&处理
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E5%AD%A6%E4%B9%A0%26%E5%8A%9E%E5%85%AC/FlowChart.html" class="md-tabs__link">
+        学习&办公
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E4%BA%8C%E6%89%8B%E4%B9%A6.html" class="md-tabs__link">
+        日常生活
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE%26%E4%BD%BF%E7%94%A8/index.html" class="md-tabs__link">
+        软件配置&使用
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="HowTo" class="md-nav__button md-logo" aria-label="HowTo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    HowTo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        关于
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../Others/index.html">Others</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Others" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Others
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/host%E6%96%87%E4%BB%B6.html" class="md-nav__link">
+        HOST 文件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/kindle%20%E9%98%85%E8%AF%BB%E6%96%B9%E6%A1%88.html" class="md-nav__link">
+        kindle 阅读方案
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/python.html" class="md-nav__link">
+        PYTHON
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/sth.html" class="md-nav__link">
+        sth
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/vscode.html" class="md-nav__link">
+        VSCODE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/windows.html" class="md-nav__link">
+        windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E4%B8%AD%E8%8B%B1%E6%96%87%E8%BE%93%E5%85%A5.html" class="md-nav__link">
+        中英文输入
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E5%89%AA%E5%88%87%E6%9D%BF%E4%BF%9D%E5%AD%98%E5%88%B0%E6%96%87%E4%BB%B6.html" class="md-nav__link">
+        剪切板保存到文件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6.html" class="md-nav__link">
+        压缩文件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E5%A6%82%E4%BD%95%E7%94%BB%E5%87%BA%E6%97%B6%E5%BA%8F%E6%B3%A2%E5%BD%A2%E5%9B%BE.html" class="md-nav__link">
+        如何画出时序波形图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E5%AD%97%E4%BD%93.html" class="md-nav__link">
+        字体
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F.html" class="md-nav__link">
+        数学公式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E6%96%87%E5%AD%97%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88.html" class="md-nav__link">
+        文字处理方案
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E6%97%A5%E5%8E%86%E3%80%81%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9%E5%90%8C%E6%AD%A5%E6%96%B9%E6%A1%88.html" class="md-nav__link">
+        日历/待办事项同步方案
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B.html" class="md-nav__link">
+        正则表达式应用实例
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95%E6%89%B9%E9%87%8F%E6%B7%BB%E5%8A%A0%E4%BB%BB%E5%8A%A1%E6%96%B9%E6%A1%88.html" class="md-nav__link">
+        滴答清单批量添加任务方案
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E7%94%B5%E5%AD%90%E7%89%88%E4%B9%A6%E7%B1%8D%E6%9F%A5%E6%89%BE%E6%96%B9%E6%B3%95.html" class="md-nav__link">
+        电子版书籍查找方法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E7%94%B5%E8%84%91%E5%A3%B0%E5%8D%A1%E9%A9%B1%E5%8A%A8.html" class="md-nav__link">
+        电脑声卡驱动
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E7%94%B5%E8%84%91%E5%A3%B0%E9%9F%B3%E6%8E%A7%E5%88%B6.html" class="md-nav__link">
+        手机声音在电脑上显示
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E7%AC%94%E8%AE%B0%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92.html" class="md-nav__link">
+        笔记管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E7%B3%BB%E7%BB%9F%E6%A1%86%E5%9B%BE%E7%94%BB%E6%B3%95.html" class="md-nav__link">
+        系统框图画法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E7%BF%BB%E8%AF%91%E8%8B%B1%E6%96%87%E6%96%87%E6%A1%A3%E7%9A%84%E6%96%B9%E6%B3%95.html" class="md-nav__link">
+        翻译英文文档的方法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E8%AF%8D%E5%85%B8.html" class="md-nav__link">
+        词典
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/%E9%9D%92%E5%B9%B4%E5%A4%A7%E5%AD%A6%E4%B9%A0.html" class="md-nav__link">
+        青年大学习
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          任务管理&生产力
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="任务管理&生产力" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          任务管理&生产力
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        任务管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="index.html">Journal</a>
+          
+            <label for="__nav_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Journal" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Journal
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="20210710-20210819.html" class="md-nav__link">
+        20210710-20210819 RECORD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="20210724.html" class="md-nav__link">
+        总结
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="20211227.html" class="md-nav__link">
+        考研结束
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="20220301.html" class="md-nav__link">
+        之前所有的总结
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="20220302.html" class="md-nav__link md-nav__link--active">
+        基于时间分配以及日历视图的时间管理
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="20220306.html" class="md-nav__link">
+        用滴答清单规划一切
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="20220316.html" class="md-nav__link">
+        日常记录
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../%E5%AA%92%E4%BD%93%E7%BB%84%E7%BB%87%26%E5%A4%84%E7%90%86/index.html">媒体组织&处理</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="媒体组织&处理" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          媒体组织&处理
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AA%92%E4%BD%93%E7%BB%84%E7%BB%87%26%E5%A4%84%E7%90%86/%E4%B8%BA%E4%BA%86%E6%84%89%E5%BF%AB%E5%9C%B0%E6%B5%8F%E8%A7%88%E5%9B%BE%E7%89%87%EF%BC%8C%E6%88%91%E5%AE%89%E8%A3%85%E4%BA%86%E5%8D%81%E5%87%A0%E4%B8%AA%E8%BD%AF%E4%BB%B6.html" class="md-nav__link">
+        为了愉快地浏览图片，我安装了十几个软件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AA%92%E4%BD%93%E7%BB%84%E7%BB%87%26%E5%A4%84%E7%90%86/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95.html" class="md-nav__link">
+        图像处理方法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AA%92%E4%BD%93%E7%BB%84%E7%BB%87%26%E5%A4%84%E7%90%86/%E5%9B%BE%E7%89%87%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95.html" class="md-nav__link">
+        图片管理方法
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          学习&办公
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="学习&办公" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          学习&办公
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B9%A0%26%E5%8A%9E%E5%85%AC/FlowChart.html" class="md-nav__link">
+        FLOWCHART 流程图画法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B9%A0%26%E5%8A%9E%E5%85%AC/caj2pdf.html" class="md-nav__link">
+        caj 文件转 PDF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          笔记管理
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="笔记管理" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          笔记管理
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B9%A0%26%E5%8A%9E%E5%85%AC/%E7%AC%94%E8%AE%B0%E7%AE%A1%E7%90%86/Obsidian.html" class="md-nav__link">
+        Obsidian
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B9%A0%26%E5%8A%9E%E5%85%AC/%E7%AC%94%E8%AE%B0%E7%AE%A1%E7%90%86/REAMDE.html" class="md-nav__link">
+        REAMDE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B9%A0%26%E5%8A%9E%E5%85%AC/%E7%AC%94%E8%AE%B0%E7%AE%A1%E7%90%86/vscode.html" class="md-nav__link">
+        Vscode
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          日常生活
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="日常生活" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          日常生活
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E4%BA%8C%E6%89%8B%E4%B9%A6.html" class="md-nav__link">
+        二手书
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E5%8F%A3%E8%85%94%E6%BA%83%E7%96%A1.html" class="md-nav__link">
+        口腔溃疡
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E5%A6%82%E4%BD%95%E5%8C%BA%E5%88%86%E9%9D%92%E5%B2%9B%E5%95%A4%E9%85%92.html" class="md-nav__link">
+        如何区分青岛啤酒
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E7%B3%BB%E9%9E%8B%E5%B8%A6.html" class="md-nav__link">
+        系鞋带
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E9%80%9A%E8%AE%AF%E8%81%94%E7%B3%BB%E4%BA%BA.html" class="md-nav__link">
+        通讯联系人
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E9%82%AE%E6%94%BF.html" class="md-nav__link">
+        邮政
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE%26%E4%BD%BF%E7%94%A8/index.html">软件配置&使用</a>
+          
+            <label for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="软件配置&使用" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          软件配置&使用
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE%26%E4%BD%BF%E7%94%A8/%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88.html" class="md-nav__link">
+        文件同步存储方案
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE%26%E4%BD%BF%E7%94%A8/%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        文件资源管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE%26%E4%BD%BF%E7%94%A8/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B9%A6%E7%AD%BE%E5%A4%87%E4%BB%BD.html" class="md-nav__link">
+        浏览器书签备份
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE%26%E4%BD%BF%E7%94%A8/%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE.html" class="md-nav__link">
+        系统配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_6" type="checkbox" id="__nav_7_6" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE%26%E4%BD%BF%E7%94%A8/Anki/index.html">Anki</a>
+          
+            <label for="__nav_7_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Anki" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_6">
+          <span class="md-nav__icon md-icon"></span>
+          Anki
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE%26%E4%BD%BF%E7%94%A8/Anki/add-on.html" class="md-nav__link">
+        插件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE%26%E4%BD%BF%E7%94%A8/Anki/%E5%AF%BC%E5%85%A5.html" class="md-nav__link">
+        导入
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_7" type="checkbox" id="__nav_7_7" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE%26%E4%BD%BF%E7%94%A8/OneNote/index.html">OneNote</a>
+          
+            <label for="__nav_7_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="OneNote" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_7">
+          <span class="md-nav__icon md-icon"></span>
+          OneNote
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE%26%E4%BD%BF%E7%94%A8/OneNote/OneNote%E5%AF%BC%E5%87%BA%E6%96%B9%E5%BC%8F.html" class="md-nav__link">
+        ONENOTE 导出方式
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_8" type="checkbox" id="__nav_7_8" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_8">
+          浏览器
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="浏览器" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_8">
+          <span class="md-nav__icon md-icon"></span>
+          浏览器
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE%26%E4%BD%BF%E7%94%A8/%E6%B5%8F%E8%A7%88%E5%99%A8/Ghelper.html" class="md-nav__link">
+        GHELPER
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+  
+
+
+
+<h1 id="_1">基于时间分配以及日历视图的时间管理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>长久以来，一直有一件事多多少少地困扰着我——规划要做的事情。我是一个比较拖的人，同时也有完美主义，导致经常赶着 DDL，并且有很多真正想做的事情一直没有做（所谓拖延症的恶果）。<br />
+在某些情况下，我的执行力会比较高，比如期末考试的最后一两周，考研期间等等。分析一下，大抵一是因为外界压力解决了动力问题，二是现实情况导致我明确不需要分心做其他事情。<br />
+考研之后，也成功总结出了一种基于项目的任务管理（有的地方我用“树状”形容），适用于内容复杂不好入手，需要一段时间完成的系统性工作。简单来说，执行任务的思路简化为按照树状结构不断细分，同时根据自己的情况挑最重要的优先执行。<br />
+但是在平常的时刻，尤其是离 DDL 较远的时候，这种方式不太能发挥作用，比如说现在我本来应该努力准备复试，但是划水划了很久……</p>
+<p>目前来说，我是这样理解的，任务的本质即“我想达成一个目标”，例如“完成作业”，“整理房间”</p>
+<p>我想目前，<strong>首先</strong>需要明确的一点是，<strong>时间管理并不能把自己物化</strong>……（不知道这个词说的对不对）。之前考研的那段时间，我主要采用“树状”的任务组织方式，把要复习的内容分门别类地以多级列表地形式列出来，然后不断补充不断完成；而执行阶段，使用 boost APP 记录每天学习的时间，这样有一个反馈。这样效果当然是可以的，衡量学习效率比较困难，但是看每天的学习时长却很直观，这样能够带来直接的激励。但是现在想想，我觉得问题在于，如果只是通过一些数据来衡量人来反馈，实际上就像控制理论中的输出反馈，太单一了，我们的内心其实比较反感这种“<strong>自我束缚</strong>”。更优的方法应当是培育人内在的执行力等，类比矫正系统的结构，不要关注最终的输出，而是关注自己的效率、满足感之类的。<br />
+<strong>其次</strong>，很多次（每过一段时间）我都陷入某种<strong>唯工具论</strong>的陷阱，想要找更合适的软件，想要满足自己的需求。其实，事实证明世界上没有所谓完美的工具，工具之间总是会有侧重点，我想最好的方法还是选择那个功能最多、和自己需求<strong>重合度最高</strong>的工具（比如今天我决定认真使用滴答清单，冲了一年会员 QAQ）。并且有时候一些需求其实是伪需求，你可以问问自己想要的功能多大程度上可以帮到自己更轻松地完成待办事项？很多候一张纸一支笔就能够完美解决！！！</p>
+<p>具体来说，时间管理可以以下面的层次理解：</p>
+<ul>
+<li>任务的组织、记录：把目标录入相应的工具，辅助完成<ul>
+<li>零散记录：滴答清单为代表，任务之间没有很明显的关联（除了清单、标签分类）</li>
+<li>项目管理：使用过的工具中 taskade，boost 都是基于项目的思路</li>
+</ul>
+</li>
+<li>任务的执行：如何又快又好地完成！关于其中的门道真的太多了，也许以后有机会我可以慢慢提升，不过我总结出了两点<br />
+  1. 一些任务对于时间信息并没有特别强调，比如工作内容（很难估计实际完成需要多久，最多写个 DDL），这时候应当<strong>分配一段时间</strong>，按照树形结构一项接一项做即可<br />
+  2. 一些任务有明确的时效性，比如重复性任务、特定时间触发的，这种结合<strong>时间线</strong>、<strong>日历视图</strong>📅会更好</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">为什么需要系统性</p>
+<p>暂且不说那些典型的项目类事件。<br />
+任务的难易程度是不同的，对于困难的事情如：学会一门语言，如果只是单纯列在待办事项里，是一定不会被执行的。只有细分为小块再不断细分，才能变成简单可操作的事情，不仅减小了拖延的发生，而且可以分配更多时间精力到相对更重要的事情上。</p>
+</div>
+<p>所以最后，今天（20220302）我决定采用这样的方法：<br />
+根据自身情况，按照大类确定一天<strong>合理的消耗时间</strong>，例如 7h 学习，3h 给日常（吃饭整理房间等），3h 给自我提升，3h 给娱乐<br />
+通过<strong>日历视图</strong>对每天的时间线进行一个规划。每天大概固定的时间做对应的事，规律生活啊孩子！习惯成自然！</p>
+<div class="admonition note">
+<p class="admonition-title">关于日历视图</p>
+<p>其实这一需求有很多实现，<br />
+<strong>待办事项清单类</strong>软件，从任务管理的角度，把任务设定时间后，就可以在日历上显示。侧重于计划，没有实际执行情况的记录，最多有个番茄钟的统计分析<br />
+而诸多<strong>时间记录软件</strong>则侧重于划分大类，记录和分析自己一天实际的消耗，任务录入基本可以告别那些一次性的琐碎的事情，不太方便。（之前用过的 boost，TimeTrack 等等）。<br />
+即有计划又有实际消耗统计的没怎么见过，之前见到一个 RefTime, 是时间记录软件，可以列一个预期，和实际消耗对比.</p>
+<blockquote>
+<p>我错了... 发现滴答清单高级会员可以在日历视图中显示(番茄钟的)专注记录</p>
+</blockquote>
+</div>
+<ul>
+<li>录入：零散的事件通过<strong>滴答清单</strong>录入（手机端分享到滴答清单，电脑段快捷键），而系统性的项目使用 <strong>taskade</strong> （其实<strong>纯文本</strong>或者 <strong>notion</strong> 等都能成！）树状记录</li>
+<li>计划：把要做的事情分配到<strong>日历视图</strong>上（其实也不需要费太大的劲，细碎的事情分配到时间段内，系统性的任务则划分一块到时候专心去做就好）</li>
+<li>执行：按照日历执行，节省精力. 可以使用番茄钟，或者继续使用 boost 记录实际消耗（以后慢慢改进）</li>
+<li>反馈：每周保存一下统计信息（关键是滴答清单不能直接导出几点到几点做了什么...) 改进方法</li>
+</ul>
+<blockquote>
+<p>上面这些方法的核心在于"日历视图"...（时间线视图也可） 这也是我一直以来想要的..<br />
+所以最后买了滴答清单的高级会员 <a href="https://www.dida365.com/education">https://www.dida365.com/education</a>, 可以用教育优惠奥<br />
+<img alt="" src="assets/20220302%20%E5%9F%BA%E4%BA%8E%E6%97%B6%E9%97%B4%E5%88%86%E9%85%8D%E4%BB%A5%E5%8F%8A%E6%97%A5%E5%8E%86%E8%A7%86%E5%9B%BE%E7%9A%84%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/2022-03-02-16-16-28.png" /></p>
+</blockquote>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="20220301.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: 之前所有的总结" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              之前所有的总结
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="20220306.html" class="md-footer__link md-footer__link--next" aria-label="Next: 用滴答清单规划一切" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              用滴答清单规划一切
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "header.autohide"], "search": "../../assets/javascripts/workers/search.5e67fbfe.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c44cc438.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
