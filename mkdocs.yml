@@ -1,4 +1,4 @@
-site_name: HowTo
+site_name: How To ?
 theme:
   name: material
   features:
@@ -25,7 +25,8 @@ theme:
 use_directory_urls: false # 此项用于 build 结果可以本地打开
 docs_dir: 'resources' # 使用单引号, 防止转义\
 site_dir: 'docs'
-
+repo_name: BuckyI/5pa55byP
+repo_url: https://github.com/BuckyI/5pa55byP
 
 markdown_extensions:
   - markdown_captions # 给图片添加标题 可选

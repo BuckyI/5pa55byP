@@ -24,7 +24,7 @@ hide:
 
 ## 如何搭建本文档
 
-### 文件编排
+### 文件编写
 
 `README.md` 是文件所在位置下的说明补充信息，文件标题用 "关于"。
 原则上只存放 markdown 文件和图片文件，不放 pdf，zip 等参考资料。
@@ -33,8 +33,19 @@ hide:
 
 - Made with **Material for MkDocs**
 - git 记录更新信息以便查看
+    [BuckyI/5pa55byP: Notes: 方式](https://github.com/BuckyI/5pa55byP)
 
-search 目前 `20220405` 搜索不支持中文
+#### 特异功能
+
+MkDocs 基于 PythonMarkdown 解析器，而 Material for MkDocs 基于其上又有独特的功能.
+
+可以看 `mkdocs.yml` 来判断使用到了哪些插件，进而环境配置.
+
+想到的记录如下：
+
+- 使用 markdown_captions 插件，为 `![alt](picname.png)` 添加图片标题 `alt` 并居中.
+- Material 文档里 Reference 提到的语法，例如 admonition 语法.
+    - 使用 `attr_list` 插件设置图片，例如图片太大时，`![](picname.png){ width="50%" }`
 
 ## Furthermore
 
@@ -42,3 +53,5 @@ search 目前 `20220405` 搜索不支持中文
 慢慢扩充
 有很多古早的文件，如果用到了可以更新一下位置和编排。
 添加密码
+主题颜色设置
+工作区设置 4 缩进
