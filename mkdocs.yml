@@ -1,6 +1,11 @@
 site_name: How To ?
 theme:
   name: material
+  # 设置图标
+  logo: assets/ship.svg
+  favicon: assets/ship.svg
+  # 设置语言, 影响 site search
+  language: zh
   features:
     - navigation.instant # instant loading
     - navigation.tracking # automatically update the URL in the address bar
@@ -12,15 +17,17 @@ theme:
     - search.suggest
     - search.highlight
     - header.autohide # header is automatically hidden when the user scrolls past a certain threshold
-  palette: 
-    - scheme: default
+  palette: # 设置主题
+    - scheme: default # 白天
+      primary: white
+      accent: blue
       toggle:
-        icon: material/toggle-switch-off-outline 
-        name: Switch to dark mode
-    - scheme: slate 
+        icon: material/lightbulb-on-outline
+        name: light mode
+    - scheme: slate # 黑夜
       toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
+        icon: material/lightbulb-outline
+        name: dark mode
 
 use_directory_urls: false # 此项用于 build 结果可以本地打开
 docs_dir: 'resources' # 使用单引号, 防止转义\
@@ -74,3 +81,6 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css

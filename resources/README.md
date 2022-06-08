@@ -31,15 +31,14 @@ hide:
 
 ### 使用工具
 
-- Made with **Material for MkDocs**
-- git 记录更新信息以便查看
+- Made with **Material for MkDocs**, 初始根据文档里 Setup 部分进行设定
+- git 记录更新信息以便查看，可以使用 GitHub Desktop 直接传到 GitHub 上.
     [BuckyI/5pa55byP: Notes: 方式](https://github.com/BuckyI/5pa55byP)
 
 #### 特异功能
 
 MkDocs 基于 PythonMarkdown 解析器，而 Material for MkDocs 基于其上又有独特的功能.
-
-可以看 `mkdocs.yml` 来判断使用到了哪些插件，进而环境配置.
+可以看 `mkdocs.yml` 来判断使用到了哪些插件和配置.
 
 想到的记录如下：
 
@@ -55,3 +54,4 @@ MkDocs 基于 PythonMarkdown 解析器，而 Material for MkDocs 基于其上又
 添加密码
 主题颜色设置
 工作区设置 4 缩进
+设置字体
