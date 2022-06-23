@@ -1136,6 +1136,8 @@
         
           
         
+          
+        
       
       
         
@@ -1194,6 +1196,20 @@
     <li class="md-nav__item">
       <a href="../%E5%AA%92%E4%BD%93%E7%BB%84%E7%BB%87%26%E5%A4%84%E7%90%86/%E5%9B%BE%E7%89%87%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95.html" class="md-nav__link">
         图片管理方法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AA%92%E4%BD%93%E7%BB%84%E7%BB%87%26%E5%A4%84%E7%90%86/%E8%A7%86%E9%A2%91%E5%8E%8B%E7%BC%A9.html" class="md-nav__link">
+        视频压缩
       </a>
     </li>
   
@@ -1389,6 +1405,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_6">
@@ -1411,6 +1431,20 @@
     <li class="md-nav__item">
       <a href="../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E4%BA%8C%E6%89%8B%E4%B9%A6.html" class="md-nav__link">
         二手书
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E5%85%B3%E4%BA%8E%E6%90%9E%E9%92%B1.html" class="md-nav__link">
+        关于搞钱
       </a>
     </li>
   
@@ -1481,6 +1515,20 @@
     <li class="md-nav__item">
       <a href="../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E9%82%AE%E6%94%BF.html" class="md-nav__link">
         邮政
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E9%BC%BB%E7%82%8E.html" class="md-nav__link">
+        鼻炎
       </a>
     </li>
   
@@ -1926,85 +1974,31 @@
 
 
 
-<h1 id="_1">正则表达式应用实例<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="attention">ATTENTION<a class="headerlink" href="#attention" title="Permanent link">&para;</a></h2>
-<p>如果出现匹配不到的问题，可以检查一下有没有中文的逗号混迹其中，中文标点不会报错！<code>!{1,}</code>与<code>!{1，}</code></p>
-<h2 id="_2">知识点<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>[\s]表示，只要出现空白就匹配<br />
-[\S]表示，非空白就匹配<br />
-正则表达式的语法在各个地方不尽相同，有细微差别，以后标注好在哪里使用的。</p>
-<p>例如，在VSCODE中子串的引用为<code>$1</code>，python的re模块中为<code>\1</code></p>
-<h2 id="_3">匹配中文字符<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p><a href="http://caibaojian.com/zhongwen-regexp.html">resource</a></p>
-<p>匹配中文字符的正则表达式： <code>[\u4e00-\u9fa5]</code><br />
-匹配双字节字符(包括汉字在内)： <code>[^\x00-\xff]</code><br />
-英文字母: <code>[a-zA-Z]</code><br />
-数字: <code>[0-9]</code><br />
-匹配中文，英文字母和数字及_:<code>^[\u4e00-\u9fa5_a-zA-Z0-9]+$</code><br />
-由数字、26 个英文字母或者下划线组成的字符串<code>\w+</code></p>
-<p>一个正则表达式，只含有汉字、数字、字母、下划线不能以下划线开头和结尾：</p>
-<div class="highlight"><pre><span></span><code><span class="o">^</span><span class="p">(</span><span class="o">?!</span>_<span class="p">)(</span><span class="o">?!</span><span class="n">.</span><span class="o">*?</span>_<span class="o">$</span><span class="p">)[</span><span class="n">a</span><span class="o">-</span><span class="n">zA</span><span class="o">-</span><span class="n">Z0</span><span class="m">-9</span>_\<span class="n">u4e00</span><span class="o">-</span>\<span class="n">u9fa5</span><span class="p">]</span><span class="o">+$</span>\
-</code></pre></div>
-<p>其中：<br />
-sign|meaning<br />
----|---<br />
-<code>^</code>|与字符串开始的地方匹配<br />
-<code>(?!_)</code>|不能以_开头<br />
-<code>(?!.*?_$)</code>|不能以_结尾<br />
-<code>[a-zA-Z0-9_\u4e00-\u9fa5]+</code>|至少一个汉字、数字、字母、下划线</p>
-<h2 id="_4">在中文和英文中间增加空格<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p><strong>这里用<code>_</code>代表空格：</strong></p>
-<ol>
-<li><code>([\w]{1,})</code>-&gt;<code>_$1_</code></li>
-<li><code>\s{2,}</code>-&gt;<code>_</code></li>
-</ol>
-<p>当然，还有很多很多其他实现方式，网上找到的先放在这里<br />
-<code>([\u4e00-\u9fa5]+)([A-Za-z]+)([\u4e00-\u9fa5]+)</code>-&gt;<code>$1 $2 $3</code></p>
-<p>或者<br />
-<code>([^\w]*?)([\w]+)([^\w]*?)</code>左右都匹配一下非<code>\w</code>匹配的内容。</p>
-<h2 id="_5">单行模式和多行模式<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<h3 id="_6">背景知识<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>这里是在python中re模块中测试的</p>
-<p>正则表达式中 \s 匹配任何空白字符，包括空格、制表符、换页符等等，等价于 <code>[\f\n\r\t\v]</code><br />
-<code>\f</code> -&gt; 匹配一个换页<br />
-<code>\n</code> -&gt; 匹配一个换行符<br />
-<code>\r</code> -&gt; 匹配一个回车符<br />
-<code>\t</code> -&gt; 匹配一个制表符<br />
-<code>\v</code> -&gt; 匹配一个垂直制表符</p>
-<p>windows 中换行符为<code>\r\n</code></p>
-<ul>
-<li>单行模式下，文本被当做只有一行，也就是说，<code>^</code>是所有文字的开头,<code>$</code>是所有文字的结尾，即使文字中间有换行符也不算数。</li>
-<li>多行模式就是改变了<code>^</code>和<code>$</code>的识别方位，（测试得到以及查资料看到），这两个是根据<code>\n</code>的位置来识别的。</li>
-</ul>
-<h3 id="_7">要注意的地方<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<p>有些时候（比如说我们复制了一大段文字，有很多行），想要处理时，单行模式认为只有一行，不是很方便。</p>
-<p>但是要注意，windows中一行包括<code>\r\n</code>，而<code>\r</code>又包括在<code>\s</code>中，所以应该注意一下，正则表达式中在多行模式下使用这个符号会把<code>\r</code>处理掉！（不过好像并不影响显示！）</p>
-<p><strong>另外要匹配真正的行尾，应该是</strong><code>(...)(\r?)$</code><br />
-<code>\r?</code>是因为，在段落中间有回车换行时，<code>\r</code>存在，在文字的末尾可能没有换行符（没有空行）。</p>
-<h2 id="_8">匹配字符串的引用<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<p>查找替换中常需要对匹配到的字符串进行引用</p>
-<p>正则表达式中加了()的被看做一个整体，可以使用<code>$1</code>、<code>$2</code>引用<br />
-<code>$0</code>代表匹配到的字符串本身</p>
-<h2 id="_9">将表格类信息进行两种形式的转化<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
-<p>有时候我们会获得一个表格</p>
-<div class="highlight"><pre><span></span><code>|head1|head2|head3|head4|
-| --- | --- | --- | --- |
-|t11|t12|t13|t14|
-|t21|t22|t23|t24|
-....
-</code></pre></div>
-<p>而有时候我们会获得</p>
-<div class="highlight"><pre><span></span><code>head1:
-t11;
-head2:
-t21;
-head3:
-t31;
-head4:
-t41;
-</code></pre></div>
-<p>在两种形式之间转化，先暂记从表格到顺序形式</p>
-<p><code>\n\|(.+?)\|(.+?)\|(.+?)\|(.+?)\|</code>-&gt;<code>\nstring1\n$1\nstring2\n$2\nstring3\n$3\nstring4\n$4\n</code></p>
+<div id="mkdocs-encrypted-content" style="display:none">lj95HEYz/09OOCrtEtrExQ==;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;^</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form">
+        <h1>This content is protected with AES encryption. </h1>
+        <p>Give me the code! 🎃</p>
+        <input type="password" id="mkdocs-content-password" placeholder="Provide password and press ENTER" />
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-base64.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/cipher-core.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pad-nopadding.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.js"></script>
+
+<script type="text/javascript" src="/assets/javascripts/decrypt-contents.js" defer></script>
 
               
             </article>

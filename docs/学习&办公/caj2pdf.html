@@ -1031,6 +1031,8 @@
         
           
         
+          
+        
       
       
         
@@ -1089,6 +1091,20 @@
     <li class="md-nav__item">
       <a href="../%E5%AA%92%E4%BD%93%E7%BB%84%E7%BB%87%26%E5%A4%84%E7%90%86/%E5%9B%BE%E7%89%87%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95.html" class="md-nav__link">
         图片管理方法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AA%92%E4%BD%93%E7%BB%84%E7%BB%87%26%E5%A4%84%E7%90%86/%E8%A7%86%E9%A2%91%E5%8E%8B%E7%BC%A9.html" class="md-nav__link">
+        视频压缩
       </a>
     </li>
   
@@ -1341,6 +1357,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_6">
@@ -1363,6 +1383,20 @@
     <li class="md-nav__item">
       <a href="../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E4%BA%8C%E6%89%8B%E4%B9%A6.html" class="md-nav__link">
         二手书
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E5%85%B3%E4%BA%8E%E6%90%9E%E9%92%B1.html" class="md-nav__link">
+        关于搞钱
       </a>
     </li>
   
@@ -1433,6 +1467,20 @@
     <li class="md-nav__item">
       <a href="../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E9%82%AE%E6%94%BF.html" class="md-nav__link">
         邮政
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E9%BC%BB%E7%82%8E.html" class="md-nav__link">
+        鼻炎
       </a>
     </li>
   
@@ -1830,132 +1878,31 @@
 
 
 
-<h1 id="caj-pdf">caj 文件转 PDF<a class="headerlink" href="#caj-pdf" title="Permanent link">&para;</a></h1>
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>在<a href="https://book.sciencereading.cn/">科学文库</a>下载到一本教材习题解答，可是为 caj 文件，只能使用 CAJViewer 才能联网打开，且15日后又要重新下载。CAJViewer本身具有导出打印功能，可是最多只允许打印两页。</p>
-<p>于是乎，在B站找到一个名不见经传的<a href="https://www.bilibili.com/video/av89826817?t=247">教程视频</a>，并下载到了相关代码。</p>
-<p>似乎百度上的迅捷转换有caj转换PDF的功能，但是限制大小2M，且不清楚对于这种限制15天的文件有没有用。</p>
-<h2 id="_2">大体原理以及改进措施<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>利用python的pynput库来控制键盘，通过各种快捷键来实现打印功能。</p>
-<p>下面是源文件，在此基础上增加了注释：</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pynput.keyboard</span> <span class="kn">import</span> <span class="n">Key</span><span class="p">,</span> <span class="n">Controller</span>
-<span class="kn">import</span> <span class="nn">time</span>
+<div id="mkdocs-encrypted-content" style="display:none">AY1IOu8uinR4OHK4uvKNqw==;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;^</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form">
+        <h1>This content is protected with AES encryption. </h1>
+        <p>Give me the code! 🎃</p>
+        <input type="password" id="mkdocs-content-password" placeholder="Provide password and press ENTER" />
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
 
-<span class="n">keyboard</span> <span class="o">=</span> <span class="n">Controller</span><span class="p">()</span>
-<span class="n">total</span> <span class="o">=</span> <span class="mi">365</span> <span class="c1"># 总共的页数</span>
-<span class="n">number</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># 开始的页数（从第一页开始）</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>   <span class="c1"># 延时5秒钟，在powershell中打开这个python文件后，要在5秒钟内切换到CAJViewer窗口</span>
 
-<span class="c1"># 循环打印</span>
-<span class="k">while</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="n">total</span><span class="p">:</span>
-    <span class="k">with</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">pressed</span><span class="p">(</span><span class="n">Key</span><span class="o">.</span><span class="n">ctrl</span><span class="p">):</span>    <span class="c1"># Ctrl+P 是打印快捷键</span>
-        <span class="n">keyboard</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
-        <span class="n">keyboard</span><span class="o">.</span><span class="n">release</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>  <span class="c1"># tab 键在打开的打印窗口中切换到输入页码的部分</span>
-        <span class="n">keyboard</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="n">Key</span><span class="o">.</span><span class="n">tab</span><span class="p">)</span>
-        <span class="n">keyboard</span><span class="o">.</span><span class="n">release</span><span class="p">(</span><span class="n">Key</span><span class="o">.</span><span class="n">tab</span><span class="p">)</span>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.js"></script>
 
-    <span class="c1"># 输入页码</span>
-    <span class="n">keyboard</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
-    <span class="n">keyboard</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="n">Key</span><span class="o">.</span><span class="n">tab</span><span class="p">)</span>
-    <span class="n">keyboard</span><span class="o">.</span><span class="n">release</span><span class="p">(</span><span class="n">Key</span><span class="o">.</span><span class="n">tab</span><span class="p">)</span>
-    <span class="n">keyboard</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">number</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-    <span class="n">keyboard</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="n">Key</span><span class="o">.</span><span class="n">enter</span><span class="p">)</span>
-    <span class="n">keyboard</span><span class="o">.</span><span class="n">release</span><span class="p">(</span><span class="n">Key</span><span class="o">.</span><span class="n">enter</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>   <span class="c1"># 这里有一段延时等待保存文件窗口跳出来</span>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-base64.js"></script>
 
-    <span class="c1"># 输入保存文件名称</span>
-    <span class="n">keyboard</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">number</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-    <span class="n">keyboard</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="n">Key</span><span class="o">.</span><span class="n">enter</span><span class="p">)</span>
-    <span class="n">keyboard</span><span class="o">.</span><span class="n">release</span><span class="p">(</span><span class="n">Key</span><span class="o">.</span><span class="n">enter</span><span class="p">)</span>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/cipher-core.js"></script>
 
-    <span class="c1"># 循环条件的number转到下一个</span>
-    <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">2</span>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pad-nopadding.js"></script>
 
-    <span class="c1"># 这5秒钟是在等待打印完成</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.js"></script>
 
-    <span class="c1"># 打印完成后重新打开这个文件，alt+f打开菜单，alt+c关闭当前文件，alt+1，打开历史记录中序号为1的文件</span>
-    <span class="k">with</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">pressed</span><span class="p">(</span><span class="n">Key</span><span class="o">.</span><span class="n">alt</span><span class="p">):</span>
-        <span class="n">keyboard</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
-        <span class="n">keyboard</span><span class="o">.</span><span class="n">release</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-        <span class="n">keyboard</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
-        <span class="n">keyboard</span><span class="o">.</span><span class="n">release</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-        <span class="n">keyboard</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
-        <span class="n">keyboard</span><span class="o">.</span><span class="n">release</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-        <span class="n">keyboard</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span>
-        <span class="n">keyboard</span><span class="o">.</span><span class="n">release</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>   <span class="c1"># 等待文件打开</span>
-</code></pre></div>
-<p>源文件其实有一些问题：</p>
-<ol>
-<li>
-<p>打印时长太短，打印时长与页面复杂程度成正比，尤其是有很多公式的，打印耗时比较长，所以到后来我逐步改成了15秒，20秒到30秒</p>
-</li>
-<li>
-<p>是一个开环的程序，就像盲人打字，经过观察，往往会因为打印的时候还没打完就进行到下一个关闭文件环节（这时候按键是不被响应的），进而会导致并没有重新打开就会再打印，导致打印失败。还会有一些其他错误，导致PDF文件虽然创立了，可是出错了无法打开。<br />
-    应对的方法：</p>
-<ol>
-<li>源文件是反复打开同一个文件，执行打印，改成了反复打开两个文件，执行打印（源caj文件复制成两份就行了），这样做，有时候可能其中一个文件不知为什么没有打开，程序的设计刚好会使另外一个文件进行打印，提高了容错率（偶然的精巧设计！），然后在下一个循环的时候，又可以两个文件都重新打开一次回到正轨。</li>
-<li>在打印完一遍之后，进行检查，把所有没有被打印到的部分以及打印出来但是打不开的部分（反映为文件大小为0）重新打印，这种操作需要把源代码的<code>while</code>改成<code>for</code>循环，之前<code>number</code>依次递增，改成在指定列表中遍历。</li>
-<li>每个按键之后都增加了微小的延时</li>
-<li>原本考虑到可以使用按键精灵来代替工作，但是学习新的软件耗费的时间成本有点大，所以放弃了。</li>
-</ol>
-</li>
-<li>
-<p>为了方便使用，还进行了两个改进</p>
-<ol>
-<li>建立了<code>.bat</code>文件，不用每次都要打开powershell再输入 <code>python main.py</code>运行了。</li>
-<li>把文件的打开关闭放在循环开头。</li>
-</ol>
-</li>
-</ol>
-<p>更改后的<a href="assets/caj2pdf/main.py">代码文件</a></p>
-<h2 id="_3">执行步骤<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>准备好所需的文件</p>
-<p>
-<figure><img src="assets/caj2pdf/2020-02-21-18-51-39.png" /><figcaption>所需的文件</figcaption>
-</figure>
-</p>
-</li>
-<li>
-<p>打开两个caj文档，这样历史记录里面的1号2号就是他俩</p>
-</li>
-<li>
-<p><code>t.bat</code>里面的内容就是<code>python main.py</code>,每次点这个文件开始运行（也可以手动在这个文件夹打开powershell/cmd窗口运行这个命令）</p>
-</li>
-<li>
-<p>运行过程中随时准备在错误发生时停止，然后修改代码在上次结束的地方开始。😅😅😅</p>
-</li>
-<li>
-<p>运行完一遍之后检查有哪些页数出错了需要重印，然后用for循环版的再执行几遍</p>
-</li>
-<li>
-<p>得到完整的文件</p>
-<p>
-<figure><img src="assets/caj2pdf/2020-02-21-19-46-45.png" /><figcaption>文件</figcaption>
-</figure>
-</p>
-</li>
-<li>
-<p>pdf拼接，可以使用“PDF Shaper free”</p>
-<p>界面<figure><img src="assets/caj2pdf/20200221170244.png" /><figcaption>界面</figcaption>
-</figure>
-<br />
-合并<figure><img src="assets/caj2pdf/20200221163215.png" /><figcaption>合并</figcaption>
-</figure>
-</p>
-</li>
-<li>
-<p>这种打印的方式会把原来的文档变成图片，目录信息也会丢失，所以合并之后可以添加上目录。</p>
-</li>
-</ol>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.js"></script>
+
+<script type="text/javascript" src="/assets/javascripts/decrypt-contents.js" defer></script>
 
               
             </article>

@@ -32,6 +32,7 @@ hide:
 ### 使用工具
 
 - Made with **Material for MkDocs**, 初始根据文档里 Setup 部分进行设定
+    - [CoinK0in/mkdocs-encryptcontent-plugin: A MkDocs plugin that encrypt/decrypt markdown content with AES](https://github.com/CoinK0in/mkdocs-encryptcontent-plugin) 加密插件
 - git 记录更新信息以便查看，可以使用 GitHub Desktop 直接传到 GitHub 上.
     [BuckyI/5pa55byP: Notes: 方式](https://github.com/BuckyI/5pa55byP)
 

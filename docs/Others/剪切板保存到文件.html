@@ -1122,6 +1122,8 @@
         
           
         
+          
+        
       
       
         
@@ -1180,6 +1182,20 @@
     <li class="md-nav__item">
       <a href="../%E5%AA%92%E4%BD%93%E7%BB%84%E7%BB%87%26%E5%A4%84%E7%90%86/%E5%9B%BE%E7%89%87%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95.html" class="md-nav__link">
         图片管理方法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AA%92%E4%BD%93%E7%BB%84%E7%BB%87%26%E5%A4%84%E7%90%86/%E8%A7%86%E9%A2%91%E5%8E%8B%E7%BC%A9.html" class="md-nav__link">
+        视频压缩
       </a>
     </li>
   
@@ -1375,6 +1391,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_6">
@@ -1397,6 +1417,20 @@
     <li class="md-nav__item">
       <a href="../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E4%BA%8C%E6%89%8B%E4%B9%A6.html" class="md-nav__link">
         二手书
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E5%85%B3%E4%BA%8E%E6%90%9E%E9%92%B1.html" class="md-nav__link">
+        关于搞钱
       </a>
     </li>
   
@@ -1467,6 +1501,20 @@
     <li class="md-nav__item">
       <a href="../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E9%82%AE%E6%94%BF.html" class="md-nav__link">
         邮政
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E9%BC%BB%E7%82%8E.html" class="md-nav__link">
+        鼻炎
       </a>
     </li>
   
@@ -1898,116 +1946,31 @@
 
 
 
-<h1 id="_1">剪切板保存到文件<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">背景<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>平时在总会看到一些有意思的话想要收藏起来，<br />
-手机上是直接粘贴到“微软桌面”里面的微软便签，手机电脑可以同步，<strong>但是</strong>微软便签并没有导出功能，无法对收藏的内容进行管理。</p>
-<p>于是想到保存到 markdown 文件中，<strong>但是</strong>每次都需要打开文件，然后粘贴到文件最后。</p>
-<p>最终想到写一个 python 小程序，做成 EXE 文件，读取剪贴板内的数据，追加到摘抄的 markdown 文件中。</p>
-<p>扩展需求：自动整理剪切板，比如在 OneNote 上面做笔记，希望清除掉复制过来的文字中的段落格式。</p>
-<h2 id="_3">使用工具<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="_4">剪贴板控制<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>pywin32 或者 pyperclip</p>
-<p>通过后面的情况可以得知，pywin32 理论上要比 pyperclip 更加强大（因为它是微软开放的 API 嘛，查资料过程中看到有剪贴图片的代码），但是由于对剪贴板的原理等不甚了解，会出现一些问题。<br />
-pyperclip 复制过来以及粘贴到剪贴板里面的内容都变成了没有格式的纯文字，更单纯，不会出现下面这个问题。</p>
-<h3 id="_5">文字处理<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>re 正则表达式</p>
-<h3 id="_6">文件保存<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>file</p>
-<h2 id="_7">遇到的问题<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<p>在尝试更改剪贴板内容的时候，发现更改剪贴板是有局限性的，似乎剪贴板有很多地方，而只修改了某一方面。</p>
-<p>测试结果:</p>
-<table>
-<thead>
-<tr>
-<th>word</th>
-<th>OneNote</th>
-<th>WPS</th>
-<th>VScode</th>
-<th>QQ</th>
-<th>终端</th>
-<th>注释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>来源</br>都无效</td>
-<td>只保留文本有效</td>
-<td>都无效</td>
-<td>有效</td>
-<td>无效文字</td>
-<td>有效</td>
-<td>过一会似乎因为什么操作又会被清空掉</td>
-</tr>
-<tr>
-<td>都无效</td>
-<td>来源</br>都无效</td>
-<td>都无效</td>
-<td>有效</td>
-<td>无效图片</td>
-<td>有效</td>
-<td></td>
-</tr>
-<tr>
-<td>都无效</td>
-<td>只保留文本有效</td>
-<td>来源</br>都无效</td>
-<td>有效</td>
-<td>无效文字</td>
-<td>有效</td>
-<td>过一会就无效了</td>
-</tr>
-<tr>
-<td>只保留文本有效</td>
-<td>只保留文本有效</td>
-<td>只保留文本有效</td>
-<td>来源</br>有效</td>
-<td>有效</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>测试代码：</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">win32clipboard</span> <span class="k">as</span> <span class="nn">c</span>
-<span class="kn">import</span> <span class="nn">win32api</span>
-<span class="kn">import</span> <span class="nn">win32con</span>
-<span class="kn">import</span> <span class="nn">re</span>
+<div id="mkdocs-encrypted-content" style="display:none">MJ2v0L8oVJcsrwsvBaO+Nw==;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;^</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form">
+        <h1>This content is protected with AES encryption. </h1>
+        <p>Give me the code! 🎃</p>
+        <input type="password" id="mkdocs-content-password" placeholder="Provide password and press ENTER" />
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
 
-<span class="n">strip_tailspase</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^\s+|\s+$&quot;</span><span class="p">,</span><span class="n">re</span><span class="o">.</span><span class="n">M</span><span class="p">)</span>  <span class="c1"># 去除开头结尾的空格  </span>
-<span class="n">c</span><span class="o">.</span><span class="n">OpenClipboard</span><span class="p">()</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">GetClipboardData</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">CF_UNICODETEXT</span><span class="p">)</span>
-<span class="n">newdata</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">strip_tailspase</span><span class="p">,</span> <span class="s2">&quot;!&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 
-<span class="n">c</span><span class="o">.</span><span class="n">SetClipboardData</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">CF_UNICODETEXT</span><span class="p">,</span> <span class="n">newdata</span><span class="p">)</span><span class="c1"># 这里不能换成c.CF_TEX,似乎结果更坏</span>
-<span class="n">c</span><span class="o">.</span><span class="n">CloseClipboard</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">newdata</span><span class="p">))</span>
-<span class="n">win32api</span><span class="o">.</span><span class="n">MessageBox</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">newdata</span><span class="p">,</span> <span class="s2">&quot;hi&quot;</span><span class="p">,</span> <span class="n">win32con</span><span class="o">.</span><span class="n">MB_OK</span><span class="p">)</span>
-</code></pre></div>
-<p>可能的规律：<br />
-当剪贴板来源是纯文本时，处理过后能够在纯文本区域得到结果，在OneNote以及Word这种支持富文本的地方只粘贴纯文本能够得到结果。<br />
-当剪贴板来源是OneNote以及Word这种富文本区域时，不好说。</p>
-<p>可能的解决方法：</p>
-<ol>
-<li>得了解到windows系统剪贴板的知识</li>
-<li>试一试pyperclip -&gt; pyperclip 没有上述问题！</li>
-</ol>
-<h2 id="_8">结果<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<p>暂时还木有弄完，放在GitHub上面了，方便管理和版本控制。</p>
-<p>代码样例：</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyperclip</span>
-<span class="kn">import</span> <span class="nn">win32api</span>
-<span class="kn">import</span> <span class="nn">win32con</span>
-<span class="kn">import</span> <span class="nn">re</span>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.js"></script>
 
-<span class="n">strip_tailspase</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^ +| +(\r)?$&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">M</span><span class="p">)</span>  <span class="c1"># 去除开头结尾的空格</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pyperclip</span><span class="o">.</span><span class="n">paste</span><span class="p">()</span>
-<span class="n">newdata</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">strip_tailspase</span><span class="p">,</span> <span class="s2">&quot;❀&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
-<span class="n">pyperclip</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">newdata</span><span class="p">)</span>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-base64.js"></script>
 
-<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">newdata</span><span class="p">))</span>
-<span class="n">win32api</span><span class="o">.</span><span class="n">MessageBox</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">newdata</span><span class="p">,</span> <span class="s2">&quot;hi&quot;</span><span class="p">,</span> <span class="n">win32con</span><span class="o">.</span><span class="n">MB_OK</span><span class="p">)</span>
-</code></pre></div>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/cipher-core.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pad-nopadding.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.js"></script>
+
+<script type="text/javascript" src="/assets/javascripts/decrypt-contents.js" defer></script>
 
               
             </article>

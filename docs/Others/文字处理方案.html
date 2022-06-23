@@ -1122,6 +1122,8 @@
         
           
         
+          
+        
       
       
         
@@ -1180,6 +1182,20 @@
     <li class="md-nav__item">
       <a href="../%E5%AA%92%E4%BD%93%E7%BB%84%E7%BB%87%26%E5%A4%84%E7%90%86/%E5%9B%BE%E7%89%87%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95.html" class="md-nav__link">
         图片管理方法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AA%92%E4%BD%93%E7%BB%84%E7%BB%87%26%E5%A4%84%E7%90%86/%E8%A7%86%E9%A2%91%E5%8E%8B%E7%BC%A9.html" class="md-nav__link">
+        视频压缩
       </a>
     </li>
   
@@ -1375,6 +1391,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_6">
@@ -1397,6 +1417,20 @@
     <li class="md-nav__item">
       <a href="../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E4%BA%8C%E6%89%8B%E4%B9%A6.html" class="md-nav__link">
         二手书
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E5%85%B3%E4%BA%8E%E6%90%9E%E9%92%B1.html" class="md-nav__link">
+        关于搞钱
       </a>
     </li>
   
@@ -1467,6 +1501,20 @@
     <li class="md-nav__item">
       <a href="../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E9%82%AE%E6%94%BF.html" class="md-nav__link">
         邮政
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E9%BC%BB%E7%82%8E.html" class="md-nav__link">
+        鼻炎
       </a>
     </li>
   
@@ -1898,69 +1946,31 @@
 
 
 
-<h1 id="_1">文字处理方案<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">文字特点<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>要处理的文字往往有一定结构特征，比如可以整理成表格类型的文字。</p>
-<ol>
-<li>列表类型的信息(key)</li>
-<li>字典类型的信息(key:value)</li>
-<li>一组信息(key:value1,value2,value3...)</li>
-</ol>
-<h2 id="_3">方式<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="vs-code">VS Code<a class="headerlink" href="#vs-code" title="Permanent link">&para;</a></h3>
-<ol>
-<li>支持使用正则表达式来查找替换，并且实时显示，很方便（Word里面需要点一下全文搜索才会显示）<br />
-    &gt; 关于正则表达式的使用可看其他资料</li>
-<li>VS Code 支持 markdown 语法，所以利用查找替换功能在字符串内添加合适的表格标记即可生成表格（可以直接复制到表格中处理）</li>
-</ol>
-<h3 id="word">Word文档<a class="headerlink" href="#word" title="Permanent link">&para;</a></h3>
-<ol>
-<li>查找替换功能（感觉没 VS Code 方便）</li>
-<li>比较强的从剪贴板转换的功能（剪贴板里是奇奇怪怪的格式时，Word可以处理得很好）</li>
-</ol>
-<p>Word的查找替换只能用 Word 的查找语法，支持通配符，似乎不支持正则表达式</p>
-<table>
-<thead>
-<tr>
-<th>工具</th>
-<th>段落标记</th>
-<th>检索到的字符串</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Word</td>
-<td><code>^p</code></td>
-<td>第1个()内，\1</td>
-</tr>
-<tr>
-<td>Regex</td>
-<td><code>\n</code></td>
-<td>第1个()内，$1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="excel">Excel<a class="headerlink" href="#excel" title="Permanent link">&para;</a></h3>
-<p>数据处理功能（排序，筛选，生成规律的数据行之类），而 VS Code 中无法选中特定的行列（因为都只是文字罢了）</p>
-<h3 id="python">python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
-<p>最后的最后，如果实在有一些功能不太知道怎么实现，可以考虑编程</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># find what&#39;s lost in what we got</span>
-<span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">lost</span> <span class="o">=</span> <span class="p">[]</span>
+<div id="mkdocs-encrypted-content" style="display:none">p9u0brBmmntmfoBzWvI7gg==;yX5G65raqDyVnDi9ZtADAGTROSf35tfiq0Rg3/XtzUAAG529bdQReaNY8aLbZqjfRlgc7oO2s64fwP3o7mtvLc8Fr0n4vvgtIGGTXAQhhCQiSrM3VylpSF9c/efG5Z9JyjqeD7MDnMPFWcHpsvvXpsqXaRPIO7FE9KSi8AcwVDw+nf7mavmtLhjhH/RtrcLKPD4bvntMGEJ353mDSTR93qTQEanOEdDaeaz34INzMqX9CjxUDXu1/4mWWa+2EUOFmmbKm/egAprpy1V+mCG8/hFtEP1lE7qPhAkxCmH1HdlLEcLI3G+XPLK7dHZeMOYge7YKf9m+YDTQLZsRywS6K86sIGxdzaP9MTlCagZMTVZdIHJFNuusRupj304IT49xP6/q1nW7fVeueEur3MVuAeyjCiqq6N14fdL11UgdAfurMRrfYhmlQRUVlcSIVaNZ7U7iJmEvSLIC6dARUKSwVdk2Pza1Ef7h9WU2xNLu+kOymr/k4iJR6Me3dGaL5bvGy/Ugm6F0/23uh3sWxylGmXYEatbu/jRpdjFVFRc2qMNc+ros9JrHPzzAS6MUai587rWAfr6yXWPrn9eJ9AJ+Ti2EuoA+bNofj7ZmYCRrWe2ZFM6iIAyXjuJLYCnsWiF0VWwdtfqOcCA12tPrs0FTYTfjIVia18e7G7HhIICdTv7jBKAIVY1HDom5DrqKZ8Lr1eTO89X+Gc+++HCPqzBVX6xUyhVSECGiO/eBrvkJeMRkPvTCRVp3+BUcRkhCvVCzWTzPaz5ALSNieQAd4YG6HjXC4LlZbvGTdacPXAmMIKVknJMG79WmI+ZTrLavluf8QJyYt6+DynFip0jnR64HSe+tQgVpARyZp2ljhgNEqVFuMy+m5efx9IMQh/omR2vu4cBgN/7cLhlUFl6YCcrNJ6U8Ve4T/sG3JG1Xy6uxZqOPgW9CIH67pm95pq6HefRlywNkurDzvP8RD1LAQmUMHimfVoXoayivHh0Vs31setteW3DwB0KaqcSJZd/JgcioETUvxXMtDeC+z+v8SXVctlXNo0I3+TVS5MfgamjjNE0ITWm4e50pGA4UwXypWzqE7u6iC3EwVFyOcDAc3WpMe3Kfl+bCkIdwa3iHy4y0iFYICip32wfGOhR0XSWLghqrKW3bFuCf4UFtDg2rt9XCTiUnbC37sGQLL6zF9mlMYHJN8nDjRlIPeGSMYzicfjVQMFEEZhRa+HPwnfcU5oiDUyALWdP/OfN2CIfaakbtEumoFeilEUjt+mvOdYTbbVPLaxg7bznkpacV3C52QzjJkkqtgrRTN7/qCS//7DMKCEkntf75VQr+Qj+x8keMnWuLfWkQd3Gvx5tVZumyycC6SxJxLtK5Q10F1L+XcTh5TxEF6AbxOuPemXjudXSrYRWV40SeJRw1Nzn0MzTtw+G3auVPr7++ngKwNZl848HoyBcNgR2smL4DOaWtRTrIfc3kYxHF049T3g9fm9uSL0bSHFiu++LjEENGTIp5glQzkH2io4oTaDnNPkboFeWIIQwgFoK9Om0pMfKoKhNivX7ligYmuzq0UmRTMbw0W272YAkg//o9ig324UhfK0+6vLthi1HxVd2gCcAF/ECBF8a/z5UyLiQNZl2uUQZRNCTJRJNkDEIWlsMZ2+f54TorlbQ1FJ+Pia/mc0LmEiTIw8nUMY5Y1/NgYf0g8I+9c9kUzDcPmlU9i456rb7g6MGHkycnuh052A/tX9GfbSIu9SHapIFFdJJygDKdmQy7bhQ+fn9IC6Eoc9XtOJCywg8BlhiDpP8WWNOUbZcFRLxEOOqkWlhsJ2z32ORoWu+Dae+vu2pPi6kWJ7Ee49Ln050sUekflHw+vDsqEgbQasW6NKJyTl/vu4NX05kY4OUfP+ccNk3Bdxp//WgmcEcMwFYcGQjwSDuogbWY1lqveqBaN0vx9Eit5b3ET5sRiUw7gBIpddOE9a/g/8jm2q8R92zuRH1Y7Kj0OrUgyy1B2TTMqcNUYbKJhd3dHRRWhy3P+mZ2mz8z3enFicFgDfLgPYf3bsX9Tng45+/+N6TrxecrnxTDEcto1NBXbQpVivd8KqAYWUc24rR/hD6RNLEMPDexK3j+5h8kbcQS6qrINYxCIMI4jJQ+ihf2Tq34qS2bHEvrJdjZfgyGhGFkAXqvnLLXQpDvnJ2MBEwuEI3DGkgr5uFPhWrO7VF3xop3XmjSQxV027H54lUNH46ASBglLlP1f9NtrsEuDleDoW1WZ05oDbZyW3x6b1NKzGmr7Yyr3ZGdRVocFFXpVAoIQff1I35rbIxYbtcZfmLu9bDxY8YeQscIWBuk3Si7nedJoHlkRevsX4SRlr7uFcYKQcBqj0ZGuRgO0M1gSqmwAcV5yQbygxfCIpWRjxAUS3mX/mAWrxuxtwxPeNujDk6mD/P3odYvGlMDR+9GmaO7qBK1nYhUCNCZDJVYMyZ1uNziJdg35q3ZZJG6xM+LYG0PVpDRMuBiCJDUavRKhKUkZa3h58HakPLd0fWKqIoazoSk97yrmLtpnsojyWx1+POrHfgCsvgpAknpIzU9sJTRldtVcMbXQRpdN8oUxCL/pYcIvNj0fhGYGbPCbdJL1hD8LRlu2htA5KX7W9nB2wtbmmKyWTnlVbec5lo4KpQ3ikye0M1fBMxGQqc4Dt9PnzGcB3aYSoXX1MGLFcS+9cu6QH84EhCaOFgCDIqnsvoF+FHrSaHm9ibLK8+L0cnGqGrfHloHow7FpgjdeAjALg5IlH/5HaZu5ZxNbGROvr0tdd7+tnDuF0897+aNL4n6wuqGUtN5wffQQjM17bAhDY9kvQcVlZbmBhDqxa7HPWSQlg/j2S8GQwnSN5Ku1qQ18Tsu8+kaENEGsF+NmNHvea61G+sO5n2VigLBZBLjswXlWs2tJrgdIwVzo/ZLK4A6En/t2QlTrBKWIQNZVgncWslIsANiobP+gNCq5axIbjOm3aJhM9j1+LMWPzS3tEvdxN5VtK1ZCYk5WHU4t9/FSE7IEN7lBQ3SWN5YA1xF2k2/H1Wc+V1bmLmtKDtjo2tybgvGhLkR18dA+T2BYTgXq5QUVZJEzlyYfssm3u9cxvvFMT+fhGhGpht6lUlsCTICN0SkQo+WjE3DDOnGUd8Ms82GJIkWZJ31ok7Z0GYcO+gtvHYdUt/rr+3+EXsXrdDaS/P7k/x1zZNIEXnEH/XpusODDHQ6LhLbpmAWQPOBu2KGPr7C45aFo8Jd63kbWdWyjFqvbhC/fte8eiLhqpdgbczsNAFcjCqcC433+fk1p9D8KORLTDlZB3gos9imI/ofJfi3LThyRE5TeBQAt8IL33hbdTjL5vbgwuq910mTa6vPwcgrHYEsuTNoX2WQ9ElIHtWppH7pMqFOWLjEEE6em9UVhs0WIywPygaONbX7QQ+UWxpej1bPBbJ8lbTmKacY9Rx2YmSN6s/KHwjD698NJ3BRbkfacp5nhl/h0ogrfQtKNJZuBprgogPvMNGYbGkp345OmH8jKD1rvr1Ta4wHj7mxkhyqzbSAt8dR6hSzyNP2Xd3x9oNjbrbnzT9/QVDT4TmXMTJvfQF8RlfmZO1Hb9qxdcUYMYwQU9ClvM4xhwRiP26MswW4LZzNh705jRtYk++e2WalNGta4OQKs1j5N1jlrjzSal/6+Gm7k4wgUnawX06mZaLCMXkEHwxs+rz+RH0Q0QMG4zjc2u65y+ZGprrg/QPbSdkoa73VCz3WYEcJnUTrjz0X6bnChL/PlxSVjoESZ/YWhiJNqU9LwJ5mbuSJWV/3tiaBISCpG2nL391BF5BsiIKfdjX7LFI3I2dc4cw+xL5E9k8FglqZF7uqP5wnBio/CNILA2zK/FREARRLnwd/1utzqbv7N+qWckSNQxoTPu4M79Irnbk25oL2vVIO38VxlHXPp2xZZZ63e5mt4N4/CAhTMsCRNoVE8N1GJD4IPOg21hn9zdwsMTdkaBMIfhEJ+7kouexvFPRPWRhWExKFkJ77GBx2i0U2VxpwpLgGsDXwJsMY1GiD6I+ktqmFypW9qlVEEoo8TMgwfUKrswIJowahWAHj0OYITqO6cU3lFwinGtE7jJIM4y498x88EtKdQOSn/deLvFch5NRzEe0g/bRJ5dVzjVIIlanK48KlCEyTaVdD9o0IRL7yfA4yoSypd+5vAwtd06AN4uU/I7MjsmuxwK6YAjxrZnfbI8MR61vRggJHdAwN3V79FvDKsU7rCCvGvVjMCIQxxaneSPOl/EbzSL4ZEuGVojekFloiF9LIJZVsvjayXxzlU5dQHpcYzutKJ3JkDmfg1YHxd7GlFSMCJYNMYg7dvTE9bwLa/SDRal74oE8IhiSIkIcxuEEyYjwPi4T1m4y3oRLZgnBXx6fRpzHMOnCaiu1VL7TVGfPZ00klqmUYqLS7NIi/huA/WOb60GUgeh82kCEllTZqXNaWFfoePeQZUFKqNHLdUY3I1sw2fWADyiPvRBifLsbkv3VmZ6k3UIhlZXzfT8xpwGNmXiCr3kf4KOSKezRX4bSugMrt/5vakfx84R8wB0+cmOsHFaOHuKX2mXa0VENSUBCDzY8FZmtNow+n/8iUHHU8kCwfqDDzETXMOVo1P8vygL9K7jSMd8QVYaX1eJrdfPB7AbLMQrfbIO+zwqSdfmIDdARzRkG5GT8p1/goQ6w9m+TIsdOJETAIVinPeMMUQBrlfPXexKHKKbPjnpsaQ0kx8xyfILMF6r975zGH2ZGBfze86RygunTJaRgbA0u7uj00k0+TdheRtwNaqbXB6p7hte+V8aEL1bHwZB+TMu4mbn5lHUEQM7YFFgBp2DCSjd2BHzH9SoAfJR3PO/zdNMVlINxoSSkhDKWAsH6TDDJu+FzJjX6jBLVJ/DHp9xn8q1GntVHt5gVb25dOxqxiaWfl+GWc3AuXVpjQjUpCxcjDDDTisSFWyc1dL6oU1/iw4ajT6ST9XLijikS74KZuGcvwuHxQn4cUN2qJdoX5F6610h9MGY03X4hceSZJRFOCuOZGSU5+3usVX7kMjY6QIgRgfsfeM08qEeDqTMULjLq+vT0+hqEaIGOe8Ywg+XaxDYc5ZhyNGuUrrWINFQUDk9UnzYanzYLZjt7HQS97/rQE+efFEbVcOqcswVaedWBYUjiKmwBdis4=;^</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form">
+        <h1>This content is protected with AES encryption. </h1>
+        <p>Give me the code! 🎃</p>
+        <input type="password" id="mkdocs-content-password" placeholder="Provide password and press ENTER" />
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
 
-<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">322</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
-        <span class="n">lost</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span>
 
-<span class="k">if</span> <span class="n">lost</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">lost</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="_4">总结<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>呐，要用到这么多工具是因为对这些工具都不是很熟练，只会简单的应用辣。</p>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-base64.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/cipher-core.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pad-nopadding.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.js"></script>
+
+<script type="text/javascript" src="/assets/javascripts/decrypt-contents.js" defer></script>
 
               
             </article>

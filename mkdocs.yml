@@ -69,7 +69,11 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 plugins:
-  - search
+  - search: {}
+  - encryptcontent:
+      global_password: '639958'
+      title_prefix: ''
+      encryption_info_message: 'Give me the code! 🎃'
   - tags:
       tags_file: README.md
   # - offline 
