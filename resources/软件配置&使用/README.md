@@ -1,8 +1,9 @@
 ---
+aliases: 
 tags:
   - 软件配置
 date created: 2022-02-25 18:10:16
-date modified: 2022-04-09 15:45:46
+date modified: 2022-08-16 20:48:24
 ---
 
 # 关于
@@ -24,6 +25,10 @@ date modified: 2022-04-09 15:45:46
 ✨系统基础
 音质增强：FxSound Enhancer 使用 DFX 驱动增强音乐的品质，在几秒钟内获得高清晰的音质。[Fxsound v1.1.15.0 官方完全免费中文版 - 果核剥壳](https://www.ghxi.com/fxsoundmfb.html)
 资源管理器：[XYplorer （资源管理器） v22.90.0100 便携注册版 - 果核剥壳](https://www.ghxi.com/xyplorer-2.html)
+
+**f.lux**: 根据时间调节屏幕色温, 夜晚降低蓝光, 护眼+不影响睡眠
+但是坏处是屏幕观感变暗, 看起来更费劲了… 所以卸载掉了, 想要养生最好还是晚上不用电脑, 确有需求再安装使用.
+![](assets/README/2022-08-16-20-43-36.png)
 
 ✨媒体播放
 本地视频播放：potplayer （也可以播放直播）
